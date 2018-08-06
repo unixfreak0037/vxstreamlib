@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+http_proxy="" https_proxy="" python3 /opt/vxstreamlib/bin/vxstreamlib.py "$@"

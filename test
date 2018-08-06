@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+cd /opt/vxstreamlib || { echo "cannot cd to /opt/vxstreamlib"; exit 1; }
+
+# if we passed no parameters then we run all the tests
+if [ "$#" -ne "1" ]
+then
+    PYTHONPATH=bin python3 -W ignore -m unittest -v test_vxstreamlib
+    exit 0
+fi
+
+# otherwise we run whatever test is specified on the command line
+PYTHONPATH=bin python3 -W ignore -m unittest -v $1
