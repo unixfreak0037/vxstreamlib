@@ -471,7 +471,7 @@ class VxStreamServer(object):
 
         return file_list, dest_path
 
-if __name__ == '__main__':
+def main():
 
     import argparse
     
@@ -578,3 +578,6 @@ if __name__ == '__main__':
     manager.add_callback(state_change_handler)
     manager.start()
     manager.wait()
+
+if __name__ == '__main__':
+    main()
